@@ -1,0 +1,17 @@
+<!-- src/app/note-list/note-list.component.html -->
+
+<div class="notes-container">
+    <h2>Notes</h2>
+    <div class="note-form">
+      <input [(ngModel)]="newNote.title" placeholder="Title" />
+      <textarea [(ngModel)]="newNote.content" placeholder="Content"></textarea>
+      <button (click)="addNote()">Add Note</button>
+    </div>
+    <div class="note-list">
+      <div class="note" *ngFor="let note of notes">
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.content }}</p>
+      </div>
+    </div>
+  </div>
+  
